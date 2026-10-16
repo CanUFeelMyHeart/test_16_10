@@ -2,7 +2,7 @@
 name: Demo Worklow #и
 on: workflow_dispatch
 jobs:
-  print:
+  my_print:
     runs-on: ubuntu-24.04
     steps:
       - name: Print to console
@@ -12,3 +12,13 @@ jobs:
           echo test1: ok
           echo test2: ok
           echo test3: ok
+  my_prod:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Print to console
+        run: echo Hello GH Actions num1
+      - name: Print a few lines
+        run: |
+          echo test11: ok
+          echo test22: ok
+          echo test33: ok
