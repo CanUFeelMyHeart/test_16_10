@@ -19,7 +19,8 @@ jobs:
           echo test3: ok
           
   my_deploy:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
+    needs: [my_testing]
     steps:
       - name: Print to console
         run: echo Hello GH Actions num1
