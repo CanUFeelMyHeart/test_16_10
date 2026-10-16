@@ -8,15 +8,14 @@ env:
   APPLICATION_NAME: "Flask"
 jobs:
   my_testing:
-    runs-on:vcngj.j.jhly
+    runs-on: ubuntu-slim
     steps:
       - name: Print to console
         run: echo Hello GH Actions
-      - name: Print a few lines
-        run: |
-          echo test1: ok
-          echo test2: ok
-          echo test3: ok
+      - name: Print ls
+        run: ls -la
+      - name: Print Var
+        run: echo "app_name ${{ env.APPLICATION_NAME }}"
           
   my_deploy:
     runs-on: ubuntu-latest
@@ -24,8 +23,5 @@ jobs:
     steps:
       - name: Print to console
         run: echo Hello GH Actions num1
-      - name: Print a few lines
-        run: |
-          echo test11: ok
-          echo test22: ok
-          echo test33: ok
+      - name: Print ls
+        run: ls -la
