@@ -1,8 +1,13 @@
 # Комментарий
-name: Demo Worklow #и
-on: workflow_dispatch
+name: Demo Worklow 
+on:
+  push:
+    branches: 
+      - main 
+env:
+  APPLICATION_NAME: "Flask"
 jobs:
-  my_print:
+  my_testing:
     runs-on: ubuntu-24.04
     steps:
       - name: Print to console
@@ -12,7 +17,8 @@ jobs:
           echo test1: ok
           echo test2: ok
           echo test3: ok
-  my_prod:
+          
+  my_deploy:
     runs-on: ubuntu-24.04
     steps:
       - name: Print to console
