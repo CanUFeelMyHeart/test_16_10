@@ -8,7 +8,7 @@ env:
   APPLICATION_NAME: "Flask"
 jobs:
   my_testing:
-    runs-on: ubuntu-24.04
+    runs-on:vcngj.j.jhly
     steps:
       - name: Print to console
         run: echo Hello GH Actions
