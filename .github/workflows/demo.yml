@@ -1,0 +1,9 @@
+# Комментарий
+name: Demo Worklow #и
+on: workflow_dispatch
+jobs:
+  print:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Print to console
+        run: echo Hello GH Actions
